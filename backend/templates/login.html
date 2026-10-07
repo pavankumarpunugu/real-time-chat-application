@@ -1,0 +1,5 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Login - ChatNest</title><link rel="stylesheet" href="/static/style.css"></head>
+<body class="auth-page"><div class="auth-card"><h1>ChatNest</h1><p>Sign in to start chatting.</p>
+<form method="post">{% csrf_token %}<input name="username" placeholder="Username" required><input name="password" type="password" placeholder="Password" required><button>Login</button></form>
+<p class="small">New user? <a href="/register/">Create an account</a></p></div></body></html>

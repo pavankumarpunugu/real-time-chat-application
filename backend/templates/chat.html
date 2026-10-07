@@ -1,0 +1,11 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ChatNest</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<header class="topbar"><div class="brand">ChatNest</div><div>{{ current_user.username }} <a href="/logout/">Logout</a></div></header>
+<main class="chat-shell">
+<aside class="sidebar"><h2>Messages</h2><input id="user-search" placeholder="Search users..."><div id="users"></div></aside>
+<section class="chat-panel"><div id="empty" class="empty">Select a user to start chatting.</div>
+<div id="active-chat" class="hidden"><div class="chat-header"><div><strong id="chat-name"></strong><span>Online chat</span></div></div><div id="messages" class="messages"></div>
+<form id="message-form" class="composer"><input id="message-input" placeholder="Type a message..." autocomplete="off"><button>Send</button></form></div></section>
+</main><script>window.CURRENT_USER_ID={{ current_user.id }};</script><script src="/static/app.js"></script>
+</body></html>
